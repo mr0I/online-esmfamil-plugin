@@ -11,25 +11,38 @@ function fetchOesResults_callback()
         exit();
     }
 
+    $selectedChar = sanitize_text_field($_POST['selectedChar']);
     global $wpdb;
     $tbl = $wpdb->prefix . EFPL_ESMFAMIL_TBL;
     $fetchAllQuery = $wpdb->prepare("SELECT * FROM $tbl");
     $results = $wpdb->get_results($fetchAllQuery);
-    // foreach ($horoscopesIds as $id) {
-    //     $horoscopesIdsArray[] = intval($id->id);
-    // }
-    // $randomId = array_rand($horoscopesIdsArray, 1);
-    // $getOneHoroscopeQuery = $wpdb->prepare("SELECT * FROM $tbl WHERE id=%d", array($randomId));
-    // $selectedHoroscope = $wpdb->get_row($getOneHoroscopeQuery);
+
+    $girlNames = [];
+    $boyNames = [];
+    $families = [];
+    $fruits = [];
+    foreach ($results as $result) {
+        if (str_starts_with($result->girl_name, $selectedChar)) $girlNames[] = $result->girl_name;
+        if (str_starts_with($result->boy_name, $selectedChar)) $boyNames[] = $result->boy_name;
+        if (str_starts_with($result->family, $selectedChar)) $families[] = $result->family;
+        if (str_starts_with($result->fruit, $selectedChar)) $fruits[] = $result->fruit;
+    }
+    $randomGirlName = $girlNames[array_rand($girlNames, 1)];
+    $randomBoyName = $boyNames[array_rand($boyNames, 1)];
+    $randomFamily = $families[array_rand($families, 1)];
+    $randomFruit = $fruits[array_rand($fruits, 1)];
 
     // if (!$selectedHoroscope) {
     //     wp_send_json(['data' => null], 400);
     //     exit();
     // }
 
-
     wp_send_json([
-        'data' => $results
+        'data' => $girlNames,
+        'girl' => $randomGirlName,
+        'boy' => $randomBoyName,
+        'family' => $randomFamily,
+        'fruit' => $randomFruit,
     ], 200);
     exit();
 }
