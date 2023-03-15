@@ -1,0 +1,36 @@
+.oes-section {
+    background: $backgroundColor;
+    padding: 15px 30px;
+
+    .oes-container {
+        border: 2px dashed $borderColor;
+        border-radius: 12px;
+        padding: 4px 24px;
+        text-align: center;
+
+        h1 {
+            font-family: inherit;
+            color: $blackColor;
+            font-weight: 700;
+        }
+
+        #oes_frm {
+            .oes-frm-group {
+                margin: 16px auto;
+
+                label,
+                select {
+                    background: $greyColor;
+                    padding: 4px 16px;
+                    border-radius: 4px;
+                    font-weight: 700;
+                }
+
+                label {
+                    font-weight: lighter;
+                    color: $blackColor;
+                }
+            }
+        }
+    }
+}
