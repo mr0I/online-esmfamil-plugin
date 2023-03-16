@@ -17,5 +17,8 @@
                 </button>
             </div>
         </form>
+        <button style="display: none;"><?= __('Play Again', 'esm_famil') ?></button>
+
+        <div class="oes-results-container" style="display: none;"></div>
     </div>
 </section>

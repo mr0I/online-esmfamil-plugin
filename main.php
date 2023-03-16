@@ -19,7 +19,7 @@ define('EFPL_SITE_CSS', plugin_dir_url(__FILE__) . 'site/static/css/');
 define('EFPL_ESMFAMIL_TBL', 'esmfamil');
 
 add_action('plugins_loaded', function () {
-    load_plugin_textdomain('esm_famil', false, basename(plugin_dir_path(__FILE__)) . '/l10n/');
+    load_plugin_textdomain('esm_famil', false, basename(plugin_dir_path(__FILE__)) . '/i10n/');
 });
 
 
@@ -35,6 +35,11 @@ add_action('wp_enqueue_scripts', function () {
         'AJAXURL' => admin_url('admin-ajax.php'),
         'SECURITY' => wp_create_nonce('2VOgPHZNsyqOiGRA'),
         'REQUEST_TIMEOUT' => 30000,
+        'GIRL_NAME' => __('Girl Name', 'esm_famil'),
+        'BOY_NAME' => __('Boy Name', 'esm_famil'),
+        'Family' => __('Family', 'esm_famil'),
+        'Fruist_And_Vegetables' => __('Fruist And Vegetables', 'esm_famil'),
+        'Food' => __('Food', 'esm_famil'),
     ));
 });
 

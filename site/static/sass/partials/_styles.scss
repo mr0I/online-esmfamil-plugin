@@ -1,6 +1,8 @@
 .oes-section {
     background: $backgroundColor;
     padding: 15px 30px;
+    // font-family: inherit;
+    font-family: vazir;
 
     .oes-container {
         border: 2px dashed $borderColor;
@@ -9,7 +11,7 @@
         text-align: center;
 
         h1 {
-            font-family: inherit;
+            // font-family: inherit;
             color: $blackColor;
             font-weight: 700;
         }
@@ -32,5 +34,45 @@
                 }
             }
         }
+    }
+
+    .oes-results-container {
+        margin: 24px auto;
+        padding: 8px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        align-content: center;
+        gap: 1%;
+
+        .oes-results-item {
+            width: 16%;
+            margin: 16px auto;
+
+            .oes-results-item__header {
+                background-color: $pinkColor;
+                padding: 4px 16px;
+                border-radius: 16px 16px 0 0;
+
+                span {
+                    color: $redColor;
+                    font-weight: bold;
+                }
+            }
+
+            .oes-results-item__content {
+                background: #fff;
+                min-height: 75px;
+                display: grid;
+                place-items: center;
+
+                span {
+                    color: $blackColor;
+                    font-weight: bold;
+                }
+            }
+        }
+
     }
 }

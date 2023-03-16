@@ -21,28 +21,30 @@ function fetchOesResults_callback()
     $boyNames = [];
     $families = [];
     $fruits = [];
+    $foods = [];
     foreach ($results as $result) {
         if (str_starts_with($result->girl_name, $selectedChar)) $girlNames[] = $result->girl_name;
         if (str_starts_with($result->boy_name, $selectedChar)) $boyNames[] = $result->boy_name;
         if (str_starts_with($result->family, $selectedChar)) $families[] = $result->family;
         if (str_starts_with($result->fruit, $selectedChar)) $fruits[] = $result->fruit;
+        if (str_starts_with($result->food, $selectedChar)) $foods[] = $result->food;
     }
     $randomGirlName = $girlNames[array_rand($girlNames, 1)];
     $randomBoyName = $boyNames[array_rand($boyNames, 1)];
     $randomFamily = $families[array_rand($families, 1)];
     $randomFruit = $fruits[array_rand($fruits, 1)];
+    $randomFood = $foods[array_rand($foods, 1)];
 
-    // if (!$selectedHoroscope) {
-    //     wp_send_json(['data' => null], 400);
-    //     exit();
-    // }
-
-    wp_send_json([
-        'data' => $girlNames,
-        'girl' => $randomGirlName,
-        'boy' => $randomBoyName,
+    $data = array(
+        'girl_name' => $randomGirlName,
+        'boy_name' => $randomBoyName,
         'family' => $randomFamily,
         'fruit' => $randomFruit,
+        'food' => $randomFood,
+    );
+
+    wp_send_json([
+        'data' => $data
     ], 200);
     exit();
 }
