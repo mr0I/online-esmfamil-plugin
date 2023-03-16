@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Online Esm Famil\n"
-"POT-Creation-Date: 2023-03-16 21:35+0330\n"
-"PO-Revision-Date: 2023-03-16 21:35+0330\n"
+"POT-Creation-Date: 2023-03-16 22:45+0330\n"
+"PO-Revision-Date: 2023-03-16 22:45+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -21,31 +21,35 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: main.php:38
+#: main.php:38 site/templates/esmfamil_cmp.php:19
+msgid "Show Result!"
+msgstr "مشاهده نتیجه!"
+
+#: main.php:39
 msgid "More Results!"
 msgstr "نتایج بیشتر!"
 
-#: main.php:39
+#: main.php:40
 msgid "Please Be Patient..."
 msgstr "شکیبا باشید..."
 
-#: main.php:40
+#: main.php:41
 msgid "Girl Name"
 msgstr "اسم دختر"
 
-#: main.php:41
+#: main.php:42
 msgid "Boy Name"
 msgstr "اسم پسر"
 
-#: main.php:42
+#: main.php:43
 msgid "Family"
 msgstr "فامیل"
 
-#: main.php:43
+#: main.php:44
 msgid "Fruist And Vegetables"
 msgstr "میوه و سبزیجات"
 
-#: main.php:44
+#: main.php:45
 msgid "Food"
 msgstr "غذا"
 
@@ -57,11 +61,7 @@ msgstr "موتور جستجوی اسم فامیل آنلاین"
 msgid "Choose Your Letter"
 msgstr "حرف موردنظر خود را انتخاب کنید"
 
-#: site/templates/esmfamil_cmp.php:16
-msgid "Show Result!"
-msgstr "مشاهده نتیجه!"
-
-#: site/templates/esmfamil_cmp.php:20
+#: site/templates/esmfamil_cmp.php:24
 msgid "Play Again"
 msgstr "شروع مجدد بازی"
 

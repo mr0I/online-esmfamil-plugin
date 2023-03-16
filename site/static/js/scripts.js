@@ -21,53 +21,65 @@ function submitOesFrm(e) {
         },
         beforeSend: () => {
             jq(submitBtn).text(EFPL_SITE_AJAX.BE_PATIENT).attr('disabled', true);
+            jq('.oes-results-container').fadeOut('slow');
         },
         success: (res, xhr) => {
             if (xhr) {
                 const container = jq('.oes-results-container');
                 document.getElementById('oes_restart_btn').style.display = 'inline-block';
+                document.getElementById('oes_select').style.display = 'none';
 
-                jq(container).css('display', 'none').html('').delay(200).append(`
+                jq(container).html('').delay(200).append(`
                     <div class="oes-results-item">
                         <div class="oes-results-item__header">
                             <span>${EFPL_SITE_AJAX.GIRL_NAME}</span>
                         </div>
-                        <div class="oes-results-item__content"><span>${res.data.girl_name}</span></div>
+                        <div class="oes-results-item__content"><span>${res.data.girl_name ?? '-'}</span></div>
                     </div>
                     <div class="oes-results-item">
                         <div class="oes-results-item__header">
                             <span>${EFPL_SITE_AJAX.BOY_NAME}</span>
                         </div>
-                        <div class="oes-results-item__content"><span>${res.data.boy_name}</span></div>
+                        <div class="oes-results-item__content"><span>${res.data.boy_name ?? '-'}</span></div>
                     </div>
                     <div class="oes-results-item">
                         <div class="oes-results-item__header">
                             <span>${EFPL_SITE_AJAX.Family}</span>
                         </div>
-                        <div class="oes-results-item__content"><span>${res.data.family}</span></div>
+                        <div class="oes-results-item__content"><span>${res.data.family ?? '-'}</span></div>
                     </div>
                     <div class="oes-results-item">
                         <div class="oes-results-item__header">
                             <span>${EFPL_SITE_AJAX.Fruist_And_Vegetables}</span>
                         </div>
-                        <div class="oes-results-item__content"><span>${res.data.fruit}</span></div>
+                        <div class="oes-results-item__content"><span>${res.data.fruit ?? '-'}</span></div>
                     </div>
                     <div class="oes-results-item">
                         <div class="oes-results-item__header">
                             <span>${EFPL_SITE_AJAX.Food}</span>
                         </div>
-                        <div class="oes-results-item__content"><span>${res.data.food}</span></div>
+                        <div class="oes-results-item__content"><span>${res.data.food ?? '-'}</span></div>
                     </div>
-                `).fadeIn('slow').end();
+                `).fadeIn('fast').get(0).scrollIntoView({ behavior: 'smooth' });
+
             }
         },
         error: (jqXHR, textStatus, errorThrown) => {
             console.error(errorThrown);
         },
         complete: () => {
-            jq(submitBtn).text(EFPL_SITE_AJAX.SUBMIT_BTN_TXT).attr('disabled', false);
+            jq(submitBtn).text(EFPL_SITE_AJAX.MORE_RESULTS_TXT).attr('disabled', false);
         },
         timeout: EFPL_SITE_AJAX.REQUEST_TIMEOUT
     });
+
+}
+
+function playAgain(e) {
+    e.preventDefault();
+    jq('.oes-results-container').fadeOut('fast');
+    jq('#oes_frm_submit').text(EFPL_SITE_AJAX.SUBMIT_BTN_TXT).attr('disabled', false);
+    jq('#oes_restart_btn').css('display', 'none');
+    jq('#oes_select').css('display', 'inline-block');
 
 }

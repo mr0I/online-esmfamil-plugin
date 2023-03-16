@@ -9,6 +9,9 @@
                     <option value="ا">الف</option>
                     <option value="آ">آ</option>
                     <option value="ب">ب</option>
+                    <option value="پ">پ</option>
+                    <option value="ت">ت</option>
+                    <option value="ث">ث</option>
                 </select>
             </div>
             <div class="oes-frm-group">
@@ -17,7 +20,7 @@
                 </button>
             </div>
             <div class="oes-frm-group">
-                <button style="display: none;" id="oes_restart_btn">
+                <button style="display: none;" id="oes_restart_btn" onclick="playAgain(event)">
                     <?= __('Play Again', 'esm_famil') ?>
                 </button>
             </div>
