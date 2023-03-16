@@ -1,41 +1,51 @@
 msgid ""
 msgstr ""
-"Plural-Forms: nplurals=2; plural=(n==0 || n==1);\n"
 "Project-Id-Version: Online Esm Famil\n"
-"POT-Creation-Date: 2023-03-16 19:09+0330\n"
-"PO-Revision-Date: 2023-03-16 19:19+0330\n"
+"POT-Creation-Date: 2023-03-16 21:35+0330\n"
+"PO-Revision-Date: 2023-03-16 21:35+0330\n"
+"Last-Translator: \n"
 "Language-Team: \n"
+"Language: fa_IR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n==0 || n==1);\n"
 "X-Generator: Poedit 2.2\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: main.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
-"Last-Translator: \n"
-"Language: fa_IR\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
 #: main.php:38
+msgid "More Results!"
+msgstr "نتایج بیشتر!"
+
+#: main.php:39
+msgid "Please Be Patient..."
+msgstr "شکیبا باشید..."
+
+#: main.php:40
 msgid "Girl Name"
 msgstr "اسم دختر"
 
-#: main.php:39
+#: main.php:41
 msgid "Boy Name"
 msgstr "اسم پسر"
 
-#: main.php:40
+#: main.php:42
 msgid "Family"
 msgstr "فامیل"
 
-#: main.php:41
+#: main.php:43
 msgid "Fruist And Vegetables"
 msgstr "میوه و سبزیجات"
 
-#: main.php:42
+#: main.php:44
 msgid "Food"
 msgstr "غذا"
 

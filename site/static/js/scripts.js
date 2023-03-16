@@ -8,6 +8,7 @@ function submitOesFrm(e) {
     e.preventDefault();
     const selectedChar = document.getElementById('oes_select').value;
     const nonce = document.getElementById('oes_nonce').value;
+    const submitBtn = document.getElementById('oes_frm_submit');
 
     jq.ajax({
         url: EFPL_SITE_AJAX.AJAXURL,
@@ -19,14 +20,14 @@ function submitOesFrm(e) {
             nonce: nonce
         },
         beforeSend: () => {
-            //jq(submitBtn).text(EFPL_SITE_AJAX.WAITING_TXT).attr('disabled', true);
+            jq(submitBtn).text(EFPL_SITE_AJAX.BE_PATIENT).attr('disabled', true);
         },
         success: (res, xhr) => {
-            console.log(res);
             if (xhr) {
                 const container = jq('.oes-results-container');
+                document.getElementById('oes_restart_btn').style.display = 'inline-block';
 
-                jq(container).html('').append(`
+                jq(container).css('display', 'none').html('').delay(200).append(`
                     <div class="oes-results-item">
                         <div class="oes-results-item__header">
                             <span>${EFPL_SITE_AJAX.GIRL_NAME}</span>
@@ -64,7 +65,7 @@ function submitOesFrm(e) {
             console.error(errorThrown);
         },
         complete: () => {
-            // jq(submitBtn).text(EFPL_SITE_AJAX.SUBMIT_BTN_TXT).attr('disabled', false);
+            jq(submitBtn).text(EFPL_SITE_AJAX.SUBMIT_BTN_TXT).attr('disabled', false);
         },
         timeout: EFPL_SITE_AJAX.REQUEST_TIMEOUT
     });

@@ -6,7 +6,7 @@
             <div class="oes-frm-group">
                 <label for="oes_select"><?= __('Choose Your Letter', 'esm_famil') ?></label>
                 <select name="oes_select" id="oes_select">
-                    <option value="ا">ا</option>
+                    <option value="ا">الف</option>
                     <option value="آ">آ</option>
                     <option value="ب">ب</option>
                 </select>
@@ -16,8 +16,12 @@
                     <?= __('Show Result!', 'esm_famil') ?>
                 </button>
             </div>
+            <div class="oes-frm-group">
+                <button style="display: none;" id="oes_restart_btn">
+                    <?= __('Play Again', 'esm_famil') ?>
+                </button>
+            </div>
         </form>
-        <button style="display: none;"><?= __('Play Again', 'esm_famil') ?></button>
 
         <div class="oes-results-container" style="display: none;"></div>
     </div>

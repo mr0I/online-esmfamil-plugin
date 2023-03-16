@@ -35,6 +35,8 @@ add_action('wp_enqueue_scripts', function () {
         'AJAXURL' => admin_url('admin-ajax.php'),
         'SECURITY' => wp_create_nonce('2VOgPHZNsyqOiGRA'),
         'REQUEST_TIMEOUT' => 30000,
+        'SUBMIT_BTN_TXT' => __('More Results!', 'esm_famil'),
+        'BE_PATIENT' => __('Please Be Patient...', 'esm_famil'),
         'GIRL_NAME' => __('Girl Name', 'esm_famil'),
         'BOY_NAME' => __('Boy Name', 'esm_famil'),
         'Family' => __('Family', 'esm_famil'),
@@ -48,7 +50,6 @@ include(EFPL_ROOTDIR . 'base_functions.php');
 register_activation_hook(__FILE__, 'EFPL_activate_function');
 register_deactivation_hook(__FILE__, 'EFPL_deactivate_function');
 include(EFPL_INC . 'shortcodes.php');
-include(EFPL_ADMIN . 'ajax_requests.php');
-// if (is_admin()) {
-//     include(EFPL_ADMIN . 'sp_shortcode_metabox.php');
-// }
+if (is_admin()) {
+    include(EFPL_ADMIN . 'ajax_requests.php');
+}

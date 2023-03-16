@@ -1,19 +1,21 @@
 .oes-section {
     background: $backgroundColor;
-    padding: 15px 30px;
+    padding: 24px;
     // font-family: inherit;
     font-family: vazir;
 
     .oes-container {
         border: 2px dashed $borderColor;
         border-radius: 12px;
-        padding: 4px 24px;
+        padding: 20px 0;
         text-align: center;
 
         h1 {
-            // font-family: inherit;
+            font-family: inherit;
             color: $blackColor;
             font-weight: 700;
+            font-size: 1.5em;
+            margin-bottom: 40px;
         }
 
         #oes_frm {
@@ -23,14 +25,55 @@
                 label,
                 select {
                     background: $greyColor;
-                    padding: 4px 16px;
+                    padding: 8px 16px;
                     border-radius: 4px;
                     font-weight: 700;
+                    border: none;
+                    min-height: 40px;
+                    font-family: inherit;
+                }
+
+                select {
+                    text-align: center;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    text-indent: 1px;
+                    text-overflow: '';
+
+                    &:focus-visible {
+                        border: none;
+                        outline: none;
+                    }
                 }
 
                 label {
                     font-weight: lighter;
                     color: $blackColor;
+                    font-size: 85%;
+                }
+
+                button[type=submit] {
+                    background-color: $redColor;
+                }
+
+                button#oes_restart_btn {
+                    background-color: $purpleColor;
+                }
+
+                button[type=submit],
+                button#oes_restart_btn {
+                    padding: 6px 24px;
+                    color: #fff;
+                    font-family: inherit;
+                    border: none;
+                    border-radius: 4px;
+                    font-size: 100%;
+                    margin-top: 16px;
+                    cursor: pointer;
+
+                    &:disabled {
+                        cursor: not-allowed;
+                    }
                 }
             }
         }
