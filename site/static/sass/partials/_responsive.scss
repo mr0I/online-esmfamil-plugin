@@ -1,17 +1,27 @@
 @media screen and (max-width: 992px) {
     .oes-section #oes_results_container .oes-results-container__content .oes-results-item {
-        width: 22%;
+        width: 23%;
     }
 }
 
 @media screen and (max-width: 768px) {
     .oes-section #oes_results_container .oes-results-container__content .oes-results-item {
-        width: 31%;
+        width: 32%;
     }
 }
 
 @media screen and (max-width: 576px) {
     .oes-section #oes_results_container .oes-results-container__content .oes-results-item {
-        width: 48%;
+        width: 49%;
+    }
+
+    .oes-section #oes_results_container .oes-results-container__cover {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .oes-section #oes_results_container .oes-results-container__content {
+        padding: 8px;
     }
 }

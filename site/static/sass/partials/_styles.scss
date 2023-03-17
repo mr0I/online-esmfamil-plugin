@@ -1,8 +1,10 @@
 .oes-section {
+    width: 96%;
+    margin: 40px auto;
     background: $backgroundColor;
     padding: 24px;
-    // font-family: inherit;
-    font-family: vazir;
+    font-family: inherit;
+    // font-family: vazir;
 
     .oes-container {
         border: 2px dashed $borderColor;
@@ -105,10 +107,10 @@
             justify-content: space-evenly;
             align-items: center;
             align-content: center;
-            gap: 1%;
+            gap: 2%;
 
             .oes-results-item {
-                width: 16%;
+                width: 18%;
                 margin: 16px 0;
 
                 .oes-results-item__header {

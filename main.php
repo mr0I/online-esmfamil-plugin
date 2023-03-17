@@ -14,6 +14,7 @@ defined('ABSPATH') or die('No script kiddies please!');
 define('EFPL_ROOTDIR', plugin_dir_path(__FILE__));
 define('EFPL_INC', EFPL_ROOTDIR . 'includes/');
 define('EFPL_ADMIN', EFPL_ROOTDIR . 'admin/');
+define('EFPL_ADMIN_PAGES', EFPL_ROOTDIR . 'admin/pages/');
 define('EFPL_SITE_JS', plugin_dir_url(__FILE__) . 'site/static/js/');
 define('EFPL_SITE_CSS', plugin_dir_url(__FILE__) . 'site/static/css/');
 define('EFPL_ESMFAMIL_TBL', 'esmfamil');
@@ -23,10 +24,6 @@ add_action('plugins_loaded', function () {
 });
 
 
-
-add_action('admin_enqueue_scripts', function () {
-    //
-});
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('efpl-main-styles', EFPL_SITE_CSS . 'styles.css', array(), '1.0.0');
 
@@ -61,11 +58,12 @@ add_action('wp_enqueue_scripts', function () {
     ));
 });
 
-/** Init & Includes */
+/** Inits */
 include(EFPL_ROOTDIR . 'base_functions.php');
 register_activation_hook(__FILE__, 'EFPL_activate_function');
 register_deactivation_hook(__FILE__, 'EFPL_deactivate_function');
 include(EFPL_INC . 'shortcodes.php');
 if (is_admin()) {
     include(EFPL_ADMIN . 'ajax_requests.php');
+    include(EFPL_ADMIN . 'admin_process.php');
 }
