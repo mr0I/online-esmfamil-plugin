@@ -79,43 +79,64 @@
         }
     }
 
-    .oes-results-container {
-        margin: 24px auto;
-        padding: 8px;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-evenly;
-        align-items: center;
-        align-content: center;
-        gap: 1%;
+    #oes_results_container {
+        position: relative;
 
-        .oes-results-item {
-            width: 16%;
-            margin: 16px auto;
-
-            .oes-results-item__header {
-                background-color: $pinkColor;
-                padding: 4px 16px;
-                border-radius: 16px 16px 0 0;
-
-                span {
-                    color: $redColor;
-                    font-weight: bold;
-                }
-            }
-
-            .oes-results-item__content {
-                background: #fff;
-                min-height: 75px;
-                display: grid;
-                place-items: center;
-
-                span {
-                    color: $blackColor;
-                    font-weight: bold;
-                }
-            }
+        .oes-results-container__cover {
+            position: absolute;
+            background: #000;
+            height: 100%;
+            width: 100%;
+            font-size: 2em;
+            color: #fff;
+            opacity: 0.5;
+            display: grid;
+            place-items: center;
+            user-select: none;
+            z-index: 999;
         }
 
+        .oes-results-container__content {
+            margin: 24px auto;
+            padding: 8px;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            align-content: center;
+            gap: 1%;
+
+
+
+            .oes-results-item {
+                width: 16%;
+                margin: 16px auto;
+
+                .oes-results-item__header {
+                    background-color: $pinkColor;
+                    padding: 4px 16px;
+                    border-radius: 16px 16px 0 0;
+
+                    span {
+                        color: $redColor;
+                        font-weight: bold;
+                    }
+                }
+
+                .oes-results-item__content {
+                    background: #fff;
+                    min-height: 75px;
+                    display: grid;
+                    place-items: center;
+
+                    span {
+                        color: $blackColor;
+                        font-weight: bold;
+                    }
+                }
+            }
+
+        }
     }
+
 }

@@ -21,13 +21,15 @@ function submitOesFrm(e) {
         },
         beforeSend: () => {
             jq(submitBtn).text(EFPL_SITE_AJAX.BE_PATIENT).attr('disabled', true);
-            jq('.oes-results-container').fadeOut('slow');
+            if (jq(submitBtn).attr('data-info') === 'more')
+                jq('.oes-results-container__cover').css('display', 'grid');
         },
         success: (res, xhr) => {
             if (xhr) {
-                const container = jq('.oes-results-container');
+                const container = jq('.oes-results-container__content');
                 document.getElementById('oes_restart_btn').style.display = 'inline-block';
                 document.getElementById('oes_select').style.display = 'none';
+                jq(submitBtn).attr('data-info', 'more');
 
                 jq(container).html('').delay(200).append(`
                     <div class="oes-results-item">
@@ -60,8 +62,11 @@ function submitOesFrm(e) {
                         </div>
                         <div class="oes-results-item__content"><span>${res.data.food ?? '-'}</span></div>
                     </div>
-                `).fadeIn('fast').get(0).scrollIntoView({ behavior: 'smooth' });
+                `).fadeIn(400);
 
+                jq('html,body').animate({
+                    scrollTop: jq("#oes_results_container").offset().top
+                }, 600);
             }
         },
         error: (jqXHR, textStatus, errorThrown) => {
@@ -69,6 +74,8 @@ function submitOesFrm(e) {
         },
         complete: () => {
             jq(submitBtn).text(EFPL_SITE_AJAX.MORE_RESULTS_TXT).attr('disabled', false);
+            jq('.oes-results-container__cover').css('display', 'none');
+
         },
         timeout: EFPL_SITE_AJAX.REQUEST_TIMEOUT
     });
@@ -77,9 +84,11 @@ function submitOesFrm(e) {
 
 function playAgain(e) {
     e.preventDefault();
-    jq('.oes-results-container').fadeOut('fast');
-    jq('#oes_frm_submit').text(EFPL_SITE_AJAX.SUBMIT_BTN_TXT).attr('disabled', false);
+    jq('.oes-results-container__content').fadeOut('fast');
+    jq('#oes_frm_submit').text(EFPL_SITE_AJAX.SUBMIT_BTN_TXT).attr({
+        'disabled': false,
+        'data-info': ''
+    });
     jq('#oes_restart_btn').css('display', 'none');
     jq('#oes_select').css('display', 'inline-block');
-
 }

@@ -15,7 +15,7 @@
                 </select>
             </div>
             <div class="oes-frm-group">
-                <button type="submit" id="oes_frm_submit">
+                <button type="submit" id="oes_frm_submit" data-info="">
                     <?= __('Show Result!', 'esm_famil') ?>
                 </button>
             </div>
@@ -26,6 +26,10 @@
             </div>
         </form>
 
-        <div class="oes-results-container" style="display: none;"></div>
+        <div id="oes_results_container">
+            <div class="oes-results-container__cover" style="display: none;"><?= __('Loading...', 'esm_famil') ?></div>
+            <div class="oes-results-container__content" style="display: none;"></div>
+        </div>
+
     </div>
 </section>
