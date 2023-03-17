@@ -117,7 +117,7 @@
                     border-radius: 16px 16px 0 0;
 
                     span {
-                        color: $redColor;
+                        color: $textRedColor;
                         font-weight: bold;
                     }
                 }
@@ -127,6 +127,7 @@
                     min-height: 75px;
                     display: grid;
                     place-items: center;
+                    box-shadow: 0 5px 15px rgb(0 0 0 / 10%);
 
                     span {
                         color: $blackColor;

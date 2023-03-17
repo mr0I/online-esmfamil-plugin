@@ -5,7 +5,7 @@
             <input type="hidden" id="oes_nonce" value="<?= wp_create_nonce('oes-nonce') ?>">
             <div class="oes-frm-group">
                 <label for="oes_select"><?= __('Choose Your Letter', 'esm_famil') ?></label>
-                <select name="oes_select" id="oes_select">
+                <select name="oes_select" id="oes_select" onfocus="this.size=6;" onblur="this.size=6;" onfocusout="this.size=null;" onchange="this.size=6; this.blur();">
                     <option value="ا">الف</option>
                     <option value="آ">آ</option>
                     <option value="ب">ب</option>
