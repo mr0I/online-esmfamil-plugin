@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Online Esm Famil\n"
-"POT-Creation-Date: 2023-03-16 22:45+0330\n"
-"PO-Revision-Date: 2023-03-16 22:45+0330\n"
+"POT-Creation-Date: 2023-03-17 12:41+0330\n"
+"PO-Revision-Date: 2023-03-17 12:44+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -53,6 +53,66 @@ msgstr "میوه و سبزیجات"
 msgid "Food"
 msgstr "غذا"
 
+#: main.php:46
+msgid "Color"
+msgstr "رنگ"
+
+#: main.php:47
+msgid "Flower"
+msgstr "گل"
+
+#: main.php:48
+msgid "Items"
+msgstr "اشیا"
+
+#: main.php:49
+msgid "City"
+msgstr "شهر"
+
+#: main.php:50
+msgid "Country"
+msgstr "کشور"
+
+#: main.php:51
+msgid "Organ"
+msgstr "اعضای بدن"
+
+#: main.php:52
+msgid "Animal"
+msgstr "حیوان"
+
+#: main.php:53
+msgid "Car"
+msgstr "ماشین"
+
+#: main.php:54
+msgid "Dress"
+msgstr "پوشاک"
+
+#: main.php:55
+msgid "Celebrity"
+msgstr "مشاهیر"
+
+#: main.php:56
+msgid "Job"
+msgstr "شغل"
+
+#: main.php:57
+msgid "Sport"
+msgstr "ورزش"
+
+#: main.php:58
+msgid "Movie"
+msgstr "فیلم و سریال"
+
+#: main.php:59
+msgid "Animation"
+msgstr "کارتون"
+
+#: main.php:60
+msgid "Book"
+msgstr "اسم کتاب"
+
 #: site/templates/esmfamil_cmp.php:3
 msgid "Online esmfamil Search Engine"
 msgstr "موتور جستجوی اسم فامیل آنلاین"
@@ -64,6 +124,10 @@ msgstr "حرف موردنظر خود را انتخاب کنید"
 #: site/templates/esmfamil_cmp.php:24
 msgid "Play Again"
 msgstr "شروع مجدد بازی"
+
+#: site/templates/esmfamil_cmp.php:30
+msgid "Loading..."
+msgstr "در حال بارگذاری..."
 
 #. Plugin Name of the plugin/theme
 msgid "Online Esm Famil"

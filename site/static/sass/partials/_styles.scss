@@ -89,16 +89,17 @@
             width: 100%;
             font-size: 2em;
             color: #fff;
-            opacity: 0.5;
+            opacity: 0.6;
             display: grid;
-            place-items: center;
+            place-items: normal;
+            padding-top: 36px;
             user-select: none;
             z-index: 999;
         }
 
         .oes-results-container__content {
             margin: 24px auto;
-            padding: 8px;
+            padding: 8px 36px;
             display: flex;
             flex-flow: row wrap;
             justify-content: space-evenly;
@@ -106,11 +107,9 @@
             align-content: center;
             gap: 1%;
 
-
-
             .oes-results-item {
                 width: 16%;
-                margin: 16px auto;
+                margin: 16px 0;
 
                 .oes-results-item__header {
                     background-color: $pinkColor;

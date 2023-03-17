@@ -25,6 +25,7 @@ function submitOesFrm(e) {
                 jq('.oes-results-container__cover').css('display', 'grid');
         },
         success: (res, xhr) => {
+            console.log(res);
             if (xhr) {
                 const container = jq('.oes-results-container__content');
                 document.getElementById('oes_restart_btn').style.display = 'inline-block';
@@ -62,11 +63,101 @@ function submitOesFrm(e) {
                         </div>
                         <div class="oes-results-item__content"><span>${res.data.food ?? '-'}</span></div>
                     </div>
+                    <div class="oes-results-item">
+                        <div class="oes-results-item__header">
+                            <span>${EFPL_SITE_AJAX.Color}</span>
+                        </div>
+                        <div class="oes-results-item__content"><span>${res.data.color ?? '-'}</span></div>
+                    </div>
+                    <div class="oes-results-item">
+                        <div class="oes-results-item__header">
+                            <span>${EFPL_SITE_AJAX.Flower}</span>
+                        </div>
+                        <div class="oes-results-item__content"><span>${res.data.flower ?? '-'}</span></div>
+                    </div>
+                    <div class="oes-results-item">
+                        <div class="oes-results-item__header">
+                            <span>${EFPL_SITE_AJAX.Items}</span>
+                        </div>
+                        <div class="oes-results-item__content"><span>${res.data.item ?? '-'}</span></div>
+                    </div>
+                    <div class="oes-results-item">
+                        <div class="oes-results-item__header">
+                            <span>${EFPL_SITE_AJAX.City}</span>
+                        </div>
+                        <div class="oes-results-item__content"><span>${res.data.city ?? '-'}</span></div>
+                    </div>
+                    <div class="oes-results-item">
+                        <div class="oes-results-item__header">
+                            <span>${EFPL_SITE_AJAX.Country}</span>
+                        </div>
+                        <div class="oes-results-item__content"><span>${res.data.country ?? '-'}</span></div>
+                    </div>
+                    <div class="oes-results-item">
+                        <div class="oes-results-item__header">
+                            <span>${EFPL_SITE_AJAX.Organ}</span>
+                        </div>
+                        <div class="oes-results-item__content"><span>${res.data.organ ?? '-'}</span></div>
+                    </div>
+                    <div class="oes-results-item">
+                        <div class="oes-results-item__header">
+                            <span>${EFPL_SITE_AJAX.Animal}</span>
+                        </div>
+                        <div class="oes-results-item__content"><span>${res.data.animal ?? '-'}</span></div>
+                    </div>
+                    <div class="oes-results-item">
+                        <div class="oes-results-item__header">
+                            <span>${EFPL_SITE_AJAX.Car}</span>
+                        </div>
+                        <div class="oes-results-item__content"><span>${res.data.car ?? '-'}</span></div>
+                    </div>
+                    <div class="oes-results-item">
+                        <div class="oes-results-item__header">
+                            <span>${EFPL_SITE_AJAX.Dress}</span>
+                        </div>
+                        <div class="oes-results-item__content"><span>${res.data.dress ?? '-'}</span></div>
+                    </div>
+                    <div class="oes-results-item">
+                        <div class="oes-results-item__header">
+                            <span>${EFPL_SITE_AJAX.Celebrity}</span>
+                        </div>
+                        <div class="oes-results-item__content"><span>${res.data.celebrity ?? '-'}</span></div>
+                    </div>
+                    <div class="oes-results-item">
+                        <div class="oes-results-item__header">
+                            <span>${EFPL_SITE_AJAX.Job}</span>
+                        </div>
+                        <div class="oes-results-item__content"><span>${res.data.job ?? '-'}</span></div>
+                    </div>
+                    <div class="oes-results-item">
+                        <div class="oes-results-item__header">
+                            <span>${EFPL_SITE_AJAX.Sport}</span>
+                        </div>
+                        <div class="oes-results-item__content"><span>${res.data.sport ?? '-'}</span></div>
+                    </div>
+                    <div class="oes-results-item">
+                        <div class="oes-results-item__header">
+                            <span>${EFPL_SITE_AJAX.Movie}</span>
+                        </div>
+                        <div class="oes-results-item__content"><span>${res.data.movie ?? '-'}</span></div>
+                    </div>
+                    <div class="oes-results-item">
+                        <div class="oes-results-item__header">
+                            <span>${EFPL_SITE_AJAX.Animation}</span>
+                        </div>
+                        <div class="oes-results-item__content"><span>${res.data.anime ?? '-'}</span></div>
+                    </div>
+                    <div class="oes-results-item">
+                        <div class="oes-results-item__header">
+                            <span>${EFPL_SITE_AJAX.Book}</span>
+                        </div>
+                        <div class="oes-results-item__content"><span>${res.data.book ?? '-'}</span></div>
+                    </div>
                 `).fadeIn(400);
 
                 jq('html,body').animate({
-                    scrollTop: jq("#oes_results_container").offset().top
-                }, 600);
+                    scrollTop: jq("#oes_results_container").offset().top - 150
+                }, 400);
             }
         },
         error: (jqXHR, textStatus, errorThrown) => {

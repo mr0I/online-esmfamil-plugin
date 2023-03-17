@@ -17,7 +17,7 @@ function EFPL_activate_function()
             `food` varchar(55) COLLATE utf8_unicode_ci DEFAULT NULL,
             `color` varchar(55) COLLATE utf8_unicode_ci DEFAULT NULL,
             `flower` varchar(55) COLLATE utf8_unicode_ci DEFAULT NULL,
-            `Items` varchar(55) COLLATE utf8_unicode_ci DEFAULT NULL,
+            `items` varchar(55) COLLATE utf8_unicode_ci DEFAULT NULL,
             `city` varchar(55) COLLATE utf8_unicode_ci DEFAULT NULL,
             `country` varchar(55) COLLATE utf8_unicode_ci DEFAULT NULL,
             `organ` varchar(55) COLLATE utf8_unicode_ci DEFAULT NULL,

@@ -43,6 +43,21 @@ add_action('wp_enqueue_scripts', function () {
         'Family' => __('Family', 'esm_famil'),
         'Fruist_And_Vegetables' => __('Fruist And Vegetables', 'esm_famil'),
         'Food' => __('Food', 'esm_famil'),
+        'Color' => __('Color', 'esm_famil'),
+        'Flower' => __('Flower', 'esm_famil'),
+        'Items' => __('Items', 'esm_famil'),
+        'City' => __('City', 'esm_famil'),
+        'Country' => __('Country', 'esm_famil'),
+        'Organ' => __('Organ', 'esm_famil'),
+        'Animal' => __('Animal', 'esm_famil'),
+        'Car' => __('Car', 'esm_famil'),
+        'Dress' => __('Dress', 'esm_famil'),
+        'Celebrity' => __('Celebrity', 'esm_famil'),
+        'Job' => __('Job', 'esm_famil'),
+        'Sport' => __('Sport', 'esm_famil'),
+        'Movie' => __('Movie', 'esm_famil'),
+        'Animation' => __('Animation', 'esm_famil'),
+        'Book' => __('Book', 'esm_famil'),
     ));
 });
 
