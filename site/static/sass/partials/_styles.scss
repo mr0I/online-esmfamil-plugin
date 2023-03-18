@@ -4,7 +4,6 @@
     background: $backgroundColor;
     padding: 24px;
     font-family: inherit;
-    // font-family: vazir;
 
     .oes-container {
         border: 2px dashed $borderColor;
@@ -26,21 +25,20 @@
 
                 label,
                 select {
-                    background: $greyColor;
+                    background: #fff;
                     padding: 8px 16px;
-                    border-radius: 4px;
+                    border-radius: 8px;
                     font-weight: 700;
                     border: none;
-                    min-height: 40px;
                     font-family: inherit;
+                    margin: 13px auto;
                 }
 
                 select {
-                    text-align: center;
-                    -webkit-appearance: none;
-                    -moz-appearance: none;
-                    text-indent: 1px;
-                    text-overflow: '';
+                    // -webkit-appearance: none;
+                    // -moz-appearance: none;
+                    // text-indent: 1px;
+                    // text-overflow: '';
 
                     &:focus-visible {
                         border: none;
@@ -89,7 +87,7 @@
             background: #000;
             height: 100%;
             width: 100%;
-            font-size: 2em;
+            font-size: 1.75em;
             color: #fff;
             opacity: 0.6;
             display: grid;
@@ -114,8 +112,9 @@
                 margin: 16px 0;
 
                 .oes-results-item__header {
+                    font-size: 16px;
                     background-color: $pinkColor;
-                    padding: 4px 16px;
+                    padding: 4px 0;
                     border-radius: 16px 16px 0 0;
 
                     span {

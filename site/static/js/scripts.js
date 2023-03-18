@@ -30,17 +30,18 @@ function submitOesFrm(e) {
                 const container = jq('.oes-results-container__content');
                 document.getElementById('oes_restart_btn').style.display = 'inline-block';
                 document.getElementById('oes_select').style.display = 'none';
+                document.getElementById('oes_select_label').style.display = 'none';
                 jq(submitBtn).attr('data-info', 'more');
 
                 jq(container).html('').delay(200).append(`
                     <div class="oes-results-item">
-                        <div class="oes-results-item__header">
+                        <div class="oes-results-item__header long-text">
                             <span>${EFPL_SITE_AJAX.GIRL_NAME}</span>
                         </div>
                         <div class="oes-results-item__content"><span>${res.data.girl_name ?? '-'}</span></div>
                     </div>
                     <div class="oes-results-item">
-                        <div class="oes-results-item__header">
+                        <div class="oes-results-item__header long-text">
                             <span>${EFPL_SITE_AJAX.BOY_NAME}</span>
                         </div>
                         <div class="oes-results-item__content"><span>${res.data.boy_name ?? '-'}</span></div>
@@ -52,7 +53,7 @@ function submitOesFrm(e) {
                         <div class="oes-results-item__content"><span>${res.data.family ?? '-'}</span></div>
                     </div>
                     <div class="oes-results-item">
-                        <div class="oes-results-item__header">
+                        <div class="oes-results-item__header long-text">
                             <span>${EFPL_SITE_AJAX.Fruist_And_Vegetables}</span>
                         </div>
                         <div class="oes-results-item__content"><span>${res.data.fruit ?? '-'}</span></div>
@@ -94,7 +95,7 @@ function submitOesFrm(e) {
                         <div class="oes-results-item__content"><span>${res.data.country ?? '-'}</span></div>
                     </div>
                     <div class="oes-results-item">
-                        <div class="oes-results-item__header">
+                        <div class="oes-results-item__header long-text">
                             <span>${EFPL_SITE_AJAX.Organ}</span>
                         </div>
                         <div class="oes-results-item__content"><span>${res.data.organ ?? '-'}</span></div>
@@ -136,7 +137,7 @@ function submitOesFrm(e) {
                         <div class="oes-results-item__content"><span>${res.data.sport ?? '-'}</span></div>
                     </div>
                     <div class="oes-results-item">
-                        <div class="oes-results-item__header">
+                        <div class="oes-results-item__header long-text">
                             <span>${EFPL_SITE_AJAX.Movie}</span>
                         </div>
                         <div class="oes-results-item__content"><span>${res.data.movie ?? '-'}</span></div>
@@ -148,7 +149,7 @@ function submitOesFrm(e) {
                         <div class="oes-results-item__content"><span>${res.data.anime ?? '-'}</span></div>
                     </div>
                     <div class="oes-results-item">
-                        <div class="oes-results-item__header">
+                        <div class="oes-results-item__header long-text">
                             <span>${EFPL_SITE_AJAX.Book}</span>
                         </div>
                         <div class="oes-results-item__content"><span>${res.data.book ?? '-'}</span></div>
@@ -181,5 +182,6 @@ function playAgain(e) {
         'data-info': ''
     });
     jq('#oes_restart_btn').css('display', 'none');
-    jq('#oes_select').css('display', 'inline-block');
+    jq('#oes_select').css('display', 'inline');
+    jq('#oes_select_label').css('display', 'inline');
 }
