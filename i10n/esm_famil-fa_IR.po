@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Online Esm Famil\n"
 "POT-Creation-Date: 2023-03-17 18:15+0330\n"
-"PO-Revision-Date: 2023-03-17 18:15+0330\n"
+"PO-Revision-Date: 2023-03-31 17:53+0430\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -159,7 +159,7 @@ msgstr ""
 
 #. Description of the plugin/theme
 msgid "Use [insert_esmfamil] to view horoscope shortcode on the page."
-msgstr "برای نمایش فال، از کد کوتاه [insert_esmfamil] استفاده نمایید."
+msgstr "برای نمایش اسم-فامیل، از کد کوتاه [insert_esmfamil] استفاده نمایید."
 
 #. Author of the plugin/theme
 msgid "ZeroOne"

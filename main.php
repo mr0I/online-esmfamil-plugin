@@ -4,7 +4,7 @@
  * Plugin Name: Online Esm Famil
  * Plugin URI:  http://localhost
  * Description: Use [insert_esmfamil] to view horoscope shortcode on the page.
- * Version: 1.0.2
+ * Version: 1.0.3
  * Author: ZeroOne
  * Author URI: https://github.com/tuderiewsc
  * Text Domain: esm_famil
