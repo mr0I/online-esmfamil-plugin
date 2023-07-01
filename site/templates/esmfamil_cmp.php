@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="<?= plugin_dir_url(__FILE__) . '../static/css/styles.css' ?>">
+
 <section class="oes-section">
     <div class="oes-container">
         <h1><?= __('Online esmfamil Search Engine', 'esm_famil') ?></h1>
@@ -59,3 +61,36 @@
 
     </div>
 </section>
+
+
+<script id='efpl-main-script-js-extra'>
+    var EFPL_SITE_AJAX = {
+        'AJAXURL': '<?= admin_url('admin-ajax.php'); ?>',
+        'SECURITY': '<?= wp_create_nonce('2VOgPHZNsyqOiGRA'); ?>',
+        'REQUEST_TIMEOUT': '30000',
+        'SUBMIT_BTN_TXT': '<?= __('Show Result!', 'esm_famil') ?>',
+        'MORE_RESULTS_TXT': '<?= __('More Results!', 'esm_famil') ?>',
+        'BE_PATIENT': '<?= __('Please Be Patient...', 'esm_famil') ?>',
+        'GIRL_NAME': '<?= __('Girl Name', 'esm_famil') ?>',
+        'BOY_NAME': '<?= __('Boy Name', 'esm_famil') ?>',
+        'Family': '<?= __('Family', 'esm_famil') ?>',
+        'Fruist_And_Vegetables': '<?= __('Fruist And Vegetables', 'esm_famil') ?>',
+        'Food': '<?= __('Food', 'esm_famil') ?>',
+        'Color': '<?= __('Color', 'esm_famil') ?>',
+        'Flower': '<?= __('Flower', 'esm_famil') ?>',
+        'Items': '<?= __('Items', 'esm_famil') ?>',
+        'City': '<?= __('City', 'esm_famil') ?>',
+        'Country': '<?= __('Country', 'esm_famil') ?>',
+        'Organ': '<?= __('Organ', 'esm_famil') ?>',
+        'Animal': '<?= __('Animal', 'esm_famil') ?>',
+        'Car': '<?= __('Car', 'esm_famil') ?>',
+        'Dress': '<?= __('Dress', 'esm_famil') ?>',
+        'Celebrity': '<?= __('Celebrity', 'esm_famil') ?>',
+        'Job': '<?= __('Job', 'esm_famil') ?>',
+        'Sport': '<?= __('Sport', 'esm_famil') ?>',
+        'Movie': '<?= __('Movie', 'esm_famil') ?>',
+        'Animation': '<?= __('Animation', 'esm_famil') ?>',
+        'Book': '<?= __('Book', 'esm_famil') ?>',
+    };
+</script>
+<script src="<?= plugin_dir_url(__FILE__) . '../static/js/scripts.js' ?>" defer></script>

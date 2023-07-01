@@ -25,7 +25,6 @@ function submitOesFrm(e) {
                 jq('.oes-results-container__cover').css('display', 'grid');
         },
         success: (res, xhr) => {
-            console.log(res);
             if (xhr) {
                 const container = jq('.oes-results-container__content');
                 document.getElementById('oes_restart_btn').style.display = 'inline-block';
